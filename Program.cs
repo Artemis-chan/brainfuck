@@ -7,6 +7,12 @@ class Program
     private const int CellCount = 30000;
     static void Main(string[] r)
     {
+    	if(r.Length != 1)
+    	{
+    		Console.WriteLine("Usage: brainfuck <filename>");
+    		return;
+    	}
+
         byte[] a = new byte[CellCount];
         int p = 0;
         Stack<int> l = new Stack<int>();
